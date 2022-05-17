@@ -1,0 +1,5 @@
+configstore/
+**/.DS_Store
+nvim/plugin/
+htop/
+tmux/
