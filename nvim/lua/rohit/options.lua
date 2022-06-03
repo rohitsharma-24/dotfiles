@@ -6,6 +6,7 @@ vim.g.mapleader = ' '
 -- vim.g.netrw_liststyle = 3
 --
 set.guicursor = ''                       -- make cursor block in insert mode
+set.cursorline = true
 set.splitbelow = true                       -- make cursor block in insert mode
 set.splitright = true                       -- make cursor block in insert mode
 set.updatetime = 100

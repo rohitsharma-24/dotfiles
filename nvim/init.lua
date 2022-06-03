@@ -18,10 +18,17 @@ require('rohit.luasnip')
 --  remove the plugin 'filetype.nvim' when that happens
 vim.g.did_load_filetypes = 1
 
--- =============== INDENT LINE ==========
-vim.g.indent_blankline_char = "¦"
-require("indent_blankline").setup {}
-
 -- =============== COLORSCHEME ==========
-vim.cmd("colorscheme OceanicNext")
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+vim.cmd[[colorscheme catppuccin]]
+
+-- =============== INDENT LINE ==========
+-- keep this in last to apply the highlight
+-- vim.cmd [[highlight IndentBlanklineIndent1 guifg=#636363 gui=nocombine]]
+
+require("indent_blankline").setup {
+  -- char = "¦",
+  use_treesitter = true
+  -- char_highlight_list = { "IndentBlanklineIndent1" }
+}
 

@@ -13,10 +13,11 @@ return require('packer').startup(function()
   use("nathom/filetype.nvim")
 
   -- ========== COLORSCHEME ===========
-  use 'mhartington/oceanic-next'
-  use 'EdenEast/nightfox.nvim'
-  use 'rose-pine/neovim'
-  use 'sainnhe/gruvbox-material'
+  use({ "catppuccin/nvim", as = "catppuccin" })
+  -- use 'mhartington/oceanic-next'
+  -- use 'EdenEast/nightfox.nvim'
+  -- use 'rose-pine/neovim'
+  -- use 'sainnhe/gruvbox-material'
 
   -- ========== IndentLines ==========
   use "lukas-reineke/indent-blankline.nvim"
