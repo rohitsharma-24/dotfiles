@@ -20,10 +20,22 @@ return require('packer').startup(function()
   -- use 'sainnhe/gruvbox-material'
 
   -- ========== IndentLines ==========
-  use "lukas-reineke/indent-blankline.nvim"
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    event="BufRead",
+    config = function() require'rohit.indent_blankline' end
+  }
+
+  -- ========== MOTIONS -- LIGHTSPEED ==========
+  use { 'ggandor/lightspeed.nvim', event="BufRead" }
 
   -- Post-install/update hook with neovim command
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    event="BufRead",
+    config=function() require'rohit.treesitter' end 
+  }
 
   -- Telescope
   use {
@@ -41,29 +53,31 @@ return require('packer').startup(function()
   -- nvimtree
   use {
     'kyazdani42/nvim-tree.lua',
+    opt=true,
+    cmd={"NvimTreeToggle", "NvimTreeOpen"},
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
-    -- config = function() require'nvim-tree'.setup {} end
+    config = function() require'rohit.nvimtree' end
   }
 
   -- tpope/
   use { 'tpope/vim-fugitive', cmd="G" }
-  use 'tpope/vim-rhubarb'
-  use 'tpope/vim-surround'
-  use 'tpope/vim-rails'
-  -- use 'tpope/vim-commentary'
+  use { 'tpope/vim-rhubarb', cmd="G blame" }
+  use { 'tpope/vim-surround', event="BufRead" }
+  -- use 'tpope/vim-rails'
 
   -- comment
   use {
     'numToStr/Comment.nvim',
+    event='BufRead',
     config = function()
       require('Comment').setup()
     end
   }
 
   -- vim gitgutter
-  use 'airblade/vim-gitgutter'
+  use { 'airblade/vim-gitgutter', event="BufRead" }
 
   -- LSP
   use 'neovim/nvim-lspconfig'
