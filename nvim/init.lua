@@ -7,9 +7,9 @@ require('rohit.lsp')
 require('rohit.telescope')
 require('rohit.lualine')
 require('rohit.luasnip')
+require('rohit.treesitter')
 
 -- ======= loaded in plugins files=======
--- require('rohit.treesitter')
 -- require('rohit.nvimtree')
 -- require('rohit.indent_blankline')
 

@@ -32,9 +32,7 @@ return require('packer').startup(function()
   -- Post-install/update hook with neovim command
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    event="BufRead",
-    config=function() require'rohit.treesitter' end 
+    run = ':TSUpdate'
   }
 
   -- Telescope
