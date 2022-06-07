@@ -1,6 +1,6 @@
 # Various colors.
 set -g status-style fg=colour244
-#set -g window-status-current-style fg=colour222
+# set -g window-status-current-style fg=colour222
 set -g pane-border-style fg=colour240
 set -g pane-active-border-style fg=colour244
 
@@ -23,7 +23,10 @@ bind l select-pane -R
 
 # Enable color support inside of tmux.
 set -g default-terminal "screen-256color"
-set -ga terminal-overrides ",xterm-256color:Tc" #replace this 'xterm-256color' with result of 'echo $TERM' outside of tmux ie., in original alacritty
+# replace this 'alacritty' with result of 'echo $TERM' outside of tmux ie., in original alacritty OR whatever terminal tmux is running on
+# In alacritty the $TERM is alacritty as of this time.
+# RUN :checkhealth in neovim and check the exact warning for color.
+set-option -sa terminal-overrides ',alacritty:RGB'
 
 # Add a bit more scroll history in the buffer.
 set -g history-limit 10000
