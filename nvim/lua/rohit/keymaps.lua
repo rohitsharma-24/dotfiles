@@ -46,7 +46,11 @@ set_map('v', '>', ">gv", opts)
 -- terminal 
 set_map("n", "<leader>tv", [[<Cmd>vsp <bar>terminal<CR>i]], { noremap = false, silent = true })
 set_map("t", "<Del>", "<C-\\><C-n>", opts)
-set_map("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
+set_map("t", "<ESC>", "<C-\\><C-n>G", { noremap = true, silent = true })
+-- this G is added at the end, to have auto scroll behaviour when working on some other buffer
+-- replace it wilth some other better solution if possible, like add moving cursor to end of 
+-- buffer when moved from terminal buffer.
+
 -- nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 --nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 --
