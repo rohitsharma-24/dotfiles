@@ -69,13 +69,18 @@ return require('packer').startup(function()
   use {
     'numToStr/Comment.nvim',
     event='BufRead',
-    config = function()
-      require('Comment').setup()
-    end
+    -- config = function()
+    --   require('Comment').setup()
+    -- end
   }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- vim gitgutter
-  use { 'airblade/vim-gitgutter', event="BufRead" }
+  -- use { 'airblade/vim-gitgutter', event="BufRead" }
+  use {
+    'lewis6991/gitsigns.nvim',
+    event="BufRead"
+  }
 
   -- LSP
   use 'neovim/nvim-lspconfig'

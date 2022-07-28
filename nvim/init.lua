@@ -8,6 +8,10 @@ require('rohit.telescope')
 require('rohit.lualine')
 require('rohit.luasnip')
 require('rohit.treesitter')
+require('rohit.comment')
+require('rohit.gitsigns')
+
+-- vim.cmd [[ command! Dotfiles execute ":lua require('rohit.custom.telescope').dotfiles()" ]]
 
 -- ======= loaded in plugins files=======
 -- require('rohit.nvimtree')
@@ -21,5 +25,5 @@ require('rohit.treesitter')
 vim.g.did_load_filetypes = 1
 
 -- =============== COLORSCHEME ==========
-vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
-vim.cmd[[colorscheme catppuccin]]
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+vim.cmd [[colorscheme catppuccin]]

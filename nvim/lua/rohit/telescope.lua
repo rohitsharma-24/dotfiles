@@ -2,6 +2,9 @@
 -- the loading is important
 require('telescope').setup {
   defaults = {
+    path_display = {
+      truncate = 3
+    }
     -- file_ignore_patterns = {"node_modules"}
   },
   extensions = {

@@ -13,6 +13,7 @@ set.number = false                        -- add line numbers
 set.relativenumber = false                -- show relative number
 set.cursorline = false
 set.cursorcolumn = false
+set.laststatus = 3                       -- will have a global statusline for each splits
 set.ignorecase = true                    -- case insensitive
 set.mouse = 'v'                            -- middle-click paste with
 set.tabstop = 2                          -- number of columns occupied by a tab
