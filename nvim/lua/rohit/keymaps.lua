@@ -42,9 +42,19 @@ set_map('n', '<s-Left>', ":vertical resize +2<CR>", opts)
 set_map('v', '<', "<gv", opts)
 set_map('v', '>', ">gv", opts)
 
+-- Test runner - Neotest
+set_map("n", "<leader>ss", ":lua require('neotest').run.run()<CR>", opts)
+set_map("n", "<leader>sl", ":lua require('neotest').run.run_last()<CR>", opts)
+set_map("n", "<leader>sf", ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", opts)
+set_map("n", "<leader>sc", ":lua require('neotest').run.stop()<CR>", opts)
+set_map("n", "<leader>sO", ":lua require('neotest').output.open({ enter = true })<CR>", opts)
+set_map("n", "<leader>so", ":lua require('neotest').output.open({ short = true })<CR>", opts)
+set_map("n", "<leader>st", ":lua require('neotest').summary.toggle()<CR>", opts)
+
 
 -- terminal 
 set_map("n", "<leader>tv", [[<Cmd>vsp <bar>terminal<CR>i]], { noremap = false, silent = true })
+set_map("n", "<leader>th", [[<Cmd>sp <bar>terminal<CR>i]], { noremap = false, silent = true })
 set_map("t", "<Del>", "<C-\\><C-n>", opts)
 set_map("t", "<ESC>", "<C-\\><C-n>G", { noremap = true, silent = true })
 -- this G is added at the end, to have auto scroll behaviour when working on some other buffer

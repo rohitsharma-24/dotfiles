@@ -97,6 +97,38 @@ return require('packer').startup(function()
 
   -- Snippets (requires above 'Authocompletion and luasnip')
   use "rafamadriz/friendly-snippets"
+  
+  -- Test Runner
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "haydenmeade/neotest-jest",
+    },
+    config = function()
+      require('neotest').setup({
+        adapters = {
+          require('neotest-jest')({
+            jestCommand = "npm run test:jest --"
+            -- jestConfigFile = "custom.jest.config.ts",
+          }),
+        }
+      })
+    end
+  }
+
+  -- colorizer
+  use { 
+    'norcalli/nvim-colorizer.lua',
+    event="BufRead",
+    config = function()
+      require('colorizer').setup()
+    end
+  }
+
+
 end)
 
 -- LSP --
