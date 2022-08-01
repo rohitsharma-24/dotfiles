@@ -59,6 +59,13 @@ return require('packer').startup(function()
     config = function() require'rohit.nvimtree' end
   }
 
+  -- nvim-dap Debugging
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+  -- use 'Pocco81/DAPInstall.nvim'
+
   -- tpope/
   use { 'tpope/vim-fugitive', cmd="G" }
   use { 'tpope/vim-rhubarb', cmd="G blame" }
