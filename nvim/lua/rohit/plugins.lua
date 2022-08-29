@@ -76,9 +76,9 @@ return require('packer').startup(function()
   use {
     'numToStr/Comment.nvim',
     event='BufRead',
-    -- config = function()
-    --   require('Comment').setup()
-    -- end
+    config = function()
+      require('Comment').setup()
+    end
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 

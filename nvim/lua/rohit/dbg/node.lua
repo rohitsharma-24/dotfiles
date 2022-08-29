@@ -1,3 +1,5 @@
+-- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#javascript
+
 local dap = require('dap')
 dap.adapters.node2 = {
   type = 'executable',

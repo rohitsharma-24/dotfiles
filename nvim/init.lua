@@ -8,10 +8,11 @@ require('rohit.telescope')
 require('rohit.lualine')
 require('rohit.luasnip')
 require('rohit.treesitter')
-require('rohit.comment')
+-- -- require('rohit.comment')
 require('rohit.gitsigns')
 require('rohit.dbg')
 require('rohit.dbg.node')
+require('rohit.dbg.chrome')
 
 -- vim.cmd [[ command! Dotfiles execute ":lua require('rohit.custom.telescope').dotfiles()" ]]
 

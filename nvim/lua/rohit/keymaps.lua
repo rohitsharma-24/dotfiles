@@ -17,6 +17,8 @@ local opts = { noremap = true, silent = true }
 set_map('n', '<leader>ff', "<CMD>lua project_files()<CR>", opts)
 set_map('n', '<leader>fg', ":lua require('telescope.builtin').live_grep()<CR>", opts)
 set_map('n', '<leader>fs', ":lua require('telescope.builtin').grep_string()<CR>", opts)
+set_map('n', '<leader>fS', ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('Search: ')})<CR>", opts)
+set_map('n', '<leader>fD', ":lua require('telescope.builtin').live_grep({ search_dirs = { vim.fn.input('DIR: ') }})<CR>", opts)
 
 set_map('n', '<tab>', ":bnext<CR>", opts)
 set_map('n', '<s-tab>', ":bprevious<CR>", opts)
