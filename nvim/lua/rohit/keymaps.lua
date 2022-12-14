@@ -15,6 +15,7 @@ local opts = { noremap = true, silent = true }
 
 -- file finder - mostly telescopic things
 set_map('n', '<leader>ff', "<CMD>lua project_files()<CR>", opts)
+set_map('n', '<leader>fl', ":lua require('telescope.builtin').find_files()<CR>", opts)
 set_map('n', '<leader>fg', ":lua require('telescope.builtin').live_grep()<CR>", opts)
 set_map('n', '<leader>fs', ":lua require('telescope.builtin').grep_string()<CR>", opts)
 set_map('n', '<leader>fS', ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('Search: ')})<CR>", opts)
@@ -32,6 +33,10 @@ set_map('n', '<up>', "<C-w><up>", opts)
 set_map('n', '<down>', "<C-w><down>", opts)
 set_map('n', '<left>', "<C-w><left>", opts)
 set_map('n', '<right>', "<C-w><right>", opts)
+
+
+set_map('n', '<C-d>', "<C-d>zz", opts)
+set_map('n', '<C-u>', "<C-u>zz", opts)
 
 -- window resize
 set_map('n', '<s-Up>', ":resize -2<CR>", opts)
