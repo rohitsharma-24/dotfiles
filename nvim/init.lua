@@ -1,18 +1,18 @@
-require('impatient') -- load this plugin first
-require('rohit.options')
-require('rohit.keymaps')
-require('rohit.plugins')
-require('rohit.cmp')
-require('rohit.lsp')
-require('rohit.telescope')
-require('rohit.lualine')
-require('rohit.luasnip')
-require('rohit.treesitter')
+require 'impatient' -- load this plugin first
+require 'rohit.options'
+require 'rohit.keymaps'
+require 'rohit.plugins'
+require 'rohit.cmp'
+require 'rohit.lsp'
+require 'rohit.telescope'
+require 'rohit.lualine'
+require 'rohit.luasnip'
+require 'rohit.treesitter'
 -- require('rohit.comment')
-require('rohit.gitsigns')
-require('rohit.dbg')
-require('rohit.dbg.node')
-require('rohit.dbg.chrome')
+require 'rohit.gitsigns'
+require 'rohit.dbg'
+require 'rohit.dbg.node'
+require 'rohit.dbg.chrome'
 
 -- vim.cmd [[ command! Dotfiles execute ":lua require('rohit.custom.telescope').dotfiles()" ]]
 

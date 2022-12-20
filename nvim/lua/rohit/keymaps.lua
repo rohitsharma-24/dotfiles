@@ -48,6 +48,9 @@ set_map('n', '<s-Left>', ":vertical resize +2<CR>", opts)
 -- Indent
 set_map('v', '<', "<gv", opts)
 set_map('v', '>', ">gv", opts)
+set_map('v', '<C-j>', ":m '>+1<CR>gv=gv", opts)
+set_map('v', '<C-k>', ":m '<-2<CR>gv=gv", opts)
+set_map('x', '<leader>p', "\"_dP", opts)
 
 -- Test runner - Neotest
 set_map("n", "<leader>ss", ":lua require('neotest').run.run()<CR>", opts)

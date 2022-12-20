@@ -90,7 +90,12 @@ return require('packer').startup(function()
   }
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
+  use { 'neovim/nvim-lspconfig',
+    requires = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+    }
+  }
   -- use 'glepnir/lspsaga.nvim'
 
   -- Autocompletion and luasnip
