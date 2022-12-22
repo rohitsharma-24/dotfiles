@@ -14,6 +14,11 @@ require 'rohit.dbg'
 require 'rohit.dbg.node'
 require 'rohit.dbg.chrome'
 
+--* startup screen disabling issue -
+-- https://github.com/nvim-lualine/lualine.nvim/issues/259
+-- https://github.com/nvim-lualine/lualine.nvim/issues/825#issuecomment-1242673971
+--* startup screen disabling issue -
+
 -- vim.cmd [[ command! Dotfiles execute ":lua require('rohit.custom.telescope').dotfiles()" ]]
 
 -- ======= loaded in plugins files=======
