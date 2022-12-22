@@ -88,9 +88,11 @@ M.setup = function()
     -- Use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
   local on_attach = function(client, bufnr)
-    -- if client.name == "tsserver" then
-    --   client.resolved_capabilities.document_formatting = false
-    -- end
+    if client.name == "tsserver" then
+      -- this allows null-ls's prettier to take over for document formatting
+      client.server_capabilities.document_formatting = false
+    end
+
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)
   end

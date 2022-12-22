@@ -43,6 +43,13 @@ return require('packer').startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- lualine
+   --use {
+   --  'feline-nvim/feline.nvim',
+   --  config = function()
+   --    require('feline').setup()
+   --    require('feline').winbar.setup()
+   --  end
+   --}
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -86,7 +93,7 @@ return require('packer').startup(function()
   -- use { 'airblade/vim-gitgutter', event="BufRead" }
   use {
     'lewis6991/gitsigns.nvim',
-    event="BufRead"
+    -- event="BufRead"
   }
 
   -- LSP
@@ -94,6 +101,7 @@ return require('packer').startup(function()
     requires = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "jose-elias-alvarez/null-ls.nvim"
     }
   }
   -- use 'glepnir/lspsaga.nvim'
