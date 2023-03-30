@@ -1,3 +1,4 @@
+-- custom telescope command to access nvim folder
 local M = {}
 
 function M.dotfiles()

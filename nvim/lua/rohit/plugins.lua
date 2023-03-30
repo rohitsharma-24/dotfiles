@@ -77,7 +77,9 @@ return require('packer').startup(function()
   use { 'tpope/vim-fugitive', cmd="G" }
   use { 'tpope/vim-rhubarb', cmd="G blame" }
   use { 'tpope/vim-surround', event="BufRead" }
-  -- use 'tpope/vim-rails'
+  use 'tpope/vim-rails'
+  -- use 'tpope/vim-projectionist'
+
 
   -- comment
   use {
@@ -148,7 +150,14 @@ return require('packer').startup(function()
     end
   }
 
-
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+  use {
+    "windwp/nvim-ts-autotag",
+    config = function() require("nvim-ts-autotag").setup {} end
+  }
 end)
 
 -- LSP --

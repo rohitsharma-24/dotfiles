@@ -3,3 +3,7 @@
 require("luasnip.loaders.from_vscode").lazy_load()
 require'luasnip'.filetype_extend("ruby", {"rails"})
 require'luasnip'.filetype_extend("javascript", {"javascriptreact"})
+require'luasnip'.filetype_extend("typescript", {"typescriptreact"})
+
+-- load remix snippets - copied from vscode marketplace - https://marketplace.visualstudio.com/items?itemName=amimaro.remix-run-snippets
+require("luasnip.loaders.from_vscode").lazy_load { paths = { "~/.config/nvim/lua/rohit/snippets/remix" } }

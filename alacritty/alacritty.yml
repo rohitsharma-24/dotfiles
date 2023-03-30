@@ -29,21 +29,27 @@ colors:
 
 window.opacity: 1.0
 
+# to download any font - (try nerd fonts for showing icons)https://github.com/ryanoasis/nerd-fonts
+# https://github.com/Homebrew/homebrew-cask-fonts
 font:
   normal:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
+    # family: "Hack Nerd Font"
     #family: Menlo
     style: Regular
   bold:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
+    # family: "Hack Nerd Font"
     #family: Menlo
     style: Bold
   italic:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
+    # family: "Hack Nerd Font"
     #family: Menlo
     style: Italic
   bold_italic:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
+    # family: "Hack Nerd Font"
     #family: Menlo
     style: Bold Italic
 

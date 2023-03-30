@@ -1,0 +1,48 @@
+{
+  "name": "remix-run-snippets",
+  "displayName": "Remix Run Snippets",
+  "description": "Remix Run Snippets for a faster development.",
+  "version": "1.1.0",
+  "publisher": "amimaro",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "url": "https://github.com/amimaro/remix-run-snippets.git",
+    "type": "git"
+  },
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "remix",
+    "remix.run",
+    "remix run",
+    "remix run snippets",
+    "snippet",
+    "snippets",
+    "code snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./typescript.json"
+      }
+    ]
+  }
+}

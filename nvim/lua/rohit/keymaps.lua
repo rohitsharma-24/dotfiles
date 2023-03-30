@@ -76,3 +76,4 @@ set_map("t", "<ESC>", "<C-\\><C-n>G", { noremap = true, silent = true })
 --
 --==========CUSTOM COMMANDS=============
 vim.cmd [[ command! Dotfiles execute "lua customTelescope.dotfiles()" ]]
+vim.cmd [[ command! Pretty execute "!cat <<<  $(jq . %) > %" ]]
